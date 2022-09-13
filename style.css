@@ -59,8 +59,11 @@ main{
     background-color: var(--bg_color_card);
 
     width: 100%;
-    border-radius: 0.8rem;
 
+    background: linear-gradient(#2a2634, #2a2634) padding-box,
+    linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%) border-box;
+    border-top: 4px solid transparent;
+    border-radius: 2rem 2rem 0.8rem 0.8rem;
 }
 
 .card h1, p{
