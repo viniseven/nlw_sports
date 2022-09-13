@@ -9,39 +9,43 @@
 
 :root{
     font-size: 62.5%;
+    --bg_color: #121214;
+    --bg_color_card: #2A2634;
+    --fc-title: #FFFFFF;
+    --fc-description: #A1A1AA;
 }
 
 body{
-max-width: 1200px;
-height: 930px;
-background: #121214;
-font-family: 'Inter', sans-serif;
-margin: auto;
-}
+    height: auto;
+    
+    background-image: url(./images/background.svg);
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: cover;
+    background-color: var(--bg_color);
 
-.container{
-background-image: url(./images/background.svg);
-background-repeat: no-repeat;
-background-size: 100%;
-width: 100%;
 }
 
 main{
-    max-width: 580px;
+    max-width: 70rem;
+    max-height: 85.4rem;
+   
+    margin:  3.2rem auto;
+
     display: flex;
     flex-direction: column;
-    margin: auto;
     align-items: center;
-    padding: 1rem; 
+    padding: 0 1rem;
 }
 
 #img_profile{
     border-radius: 50%;
-    width: 120px;
-    padding: 4px;
+    max-width: 120px;
+    max-height: 120px;
+
     background-image: linear-gradient(180deg,#9572FC,#49DEB3,#E2D45C);
+    padding: 4px;
     margin-bottom: 3.2rem;
-    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 .card-wrapper{
@@ -52,77 +56,73 @@ main{
 }
 
 .card{
-    background-color: #2A2634;
+    background-color: var(--bg_color_card);
+
     width: 100%;
-    padding: 2.2rem;
-    margin-bottom: 2.4rem;
-    background: linear-gradient(#2a2634, #2a2634) padding-box,
-    linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%) border-box;
-    border-top: 4px solid transparent;
-    border-radius: 2rem 2rem 0.8rem 0.8rem;
+    border-radius: 0.8rem;
+
 }
+
+.card h1, p{
+    padding: 1rem 2rem 0 ;
+}
+
 .card h1{
-    color: #ffffff;
+    color: var(--fc-title);
+    font-family: 'Inter';
     font-size: 2.4rem;
-    line-height: 3.8rem;
-    font-weight: 900;
+    letter-spacing: 0.50px;
+    margin-bottom: 0.5rem;
 }
 
 .card p{
-    color: #A1A1AA;
+    color: var(--fc-description);
+    font-family: 'Inter';
     font-size: 1.6rem;
-    line-height: 1.6rem;
     font-weight: 400;
-    margin-bottom: 2.4rem;
 }
 
-.card div{
+.card ul{
+    list-style: none;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     gap: 1.6rem;
-}
-
-#img-games, #img-stream, ul{
-   list-style: none;
-   display: flex;
-   flex-direction: row;
-   gap: 1.6rem;
-}
-
-#img-games{
-    border: 1px solid red;
-}
-
-#img-games img{
-    width: 90px;
-    height: 120px;
-    border-radius: 8px;
-}
-
-#img-stream img{
-  border-radius: 50px;
+    padding: 3rem;
 }
 
 .card img{
-    cursor: pointer;
+    border-radius: 0.8rem;
     transition: 1s;
-    filter: brightness(0.8);  
+    filter: brightness(0.7);
 }
 
 .card img:hover{
-    scale: 1.3;
+    cursor: pointer;
+    scale: 1.1;
     transition: 1s;
     filter: brightness(1);
 }
 
-@keyframes myAnim {
-	0%,
-	50%
-	{
-		opacity: 0;
-	}
+.card-wrapper div:nth-child(2) img{
+    border-radius: 50px;
+    border: 1px solid #443E54;
+}
 
-	100%  {
-		opacity: 1;
-	}
+@media (max-width: 686px) {
+    
+    .card{
+        text-align: center;
+    }
+
+    .card ul{
+       display: grid;
+       grid-template-columns: 1fr 1fr 1fr;
+       text-align: center;
+       width: 40%;
+       margin: 1rem auto;
+       padding: 0;
+    }
+    .card img{
+        min-width: 80%;
+    }
 }
