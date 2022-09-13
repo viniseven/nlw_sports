@@ -117,8 +117,6 @@ main{
     .card ul{
        display: grid;
        grid-template-columns: 1fr 1fr 1fr;
-       text-align: center;
-       width: 40%;
        margin: 1rem auto;
        padding: 0;
     }
