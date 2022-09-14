@@ -38,7 +38,7 @@ main{
     padding: 0 1rem;
 }
 
-#img_profile{
+header img{
     border-radius: 50%;
     max-width: 120px;
     max-height: 120px;
@@ -61,7 +61,7 @@ main{
     width: 100%;
 
     background: linear-gradient(#2a2634, #2a2634) padding-box,
-    linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%) border-box;
+    linear-gradient(90deg, #9572fc 0%, #43e7ad 50.52%, #e2d45c 100%);
     border-top: 4px solid transparent;
     border-radius: 2rem 2rem 0.8rem 0.8rem;
 }
